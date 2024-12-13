@@ -3,7 +3,7 @@ import { useState } from "react"
 const StatisticsLine = (props) => {
   return (
     <tr>
-      <td>{props.text}</td>
+      <td style={{ color: props.color }}>{props.text}</td>
       <td>{props.value}</td>
     </tr>
   )
@@ -13,7 +13,7 @@ const Statistics = (props) => {
   if (props.good > 0 || props.neutral > 0 || props.bad > 0) {
     return (
       <table>
-        <StatisticsLine text="good" value={props.good} />
+        <StatisticsLine text="good" value={props.good} color="green" />
         <StatisticsLine text="neutral" value={props.neutral} />
         <StatisticsLine text="bad" value={props.bad} />
         <StatisticsLine
